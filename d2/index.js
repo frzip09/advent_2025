@@ -9,9 +9,14 @@ function chunkString(str, size) {
 }
 
 function* factors(input) {
-  for (let i = 1; i <= input; i++) {
+  const limit = Math.floor(Math.sqrt(input));
+  for (let i = 1; i <= limit; i++) {
     if (input % i === 0) {
       yield i;
+      const complementPair = input / i;
+      if (complementPair !== i) {
+        yield complementPair;
+      }
     }
   }
 }
