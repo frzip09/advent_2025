@@ -68,7 +68,7 @@ function removeItems(matrix, totalRemoved) {
     for (let j = 0; j < validNeighbors[i].length; j++) {
       if (validNeighbors[i][j]) {
         removed++;
-                newMatrix[i][j] = 'x';
+        newMatrix[i][j] = 'x';
       }
     }
   }
@@ -83,7 +83,7 @@ function removeItems(matrix, totalRemoved) {
 function solutionPart2(input) {
   const matrix = [];
   for (row of input) {
-        matrix.push(row.split(''));
+    matrix.push(row.split(''));
   }
   const removed = removeItems(matrix, 0);
   return removed;
