@@ -28,8 +28,8 @@ function createValidNeighborMatrix(matrix) {
   for (let i = 0; i < matrix.length; i++) {
     newMatrix[i] = [];
     for (let j = 0; j < matrix[i].length; j++) {
-            if (matrix[i][j] === '@') {
-                const val = getValidNeighbors(i, j, matrix, (x, y, matrix) => matrix[x][y] === '@')
+      if (matrix[i][j] === '@') {
+        const val = getValidNeighbors(i, j, matrix, (x, y, matrix) => matrix[x][y] === '@')
         newMatrix[i][j] = val.length < 4;
       } else {
         newMatrix[i][j] = false;
